@@ -25,9 +25,6 @@
               titleColor: "#121212",
               textColor: "#0C0C0C99",
             },
-            // backgroundImage: {
-            //   "banner-bg1": "url(./images/banner1.png)",
-            // },
           },
         },
       };
@@ -100,7 +97,9 @@
   <body class="font-lato">
     <header class="container mx-auto px-2 mt-6 relative">
       <!-- start navBar  -->
-      <div class="navbar bg-primaryColor justify-center rounded-full py-2 px-6">
+      <div
+        class="navbar md:bg-primaryColor justify-between rounded-full py-2 px-6"
+      >
         <!-- nav left Items  start -->
 
         <div class="navbar-start hidden lg:flex">
@@ -161,12 +160,22 @@
             </label>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box max-w-md text-lg font-medium"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box max-w-md text-lg font-medium right-0 left-auto text-center flex flex-col items-center justify-center"
             >
               <li><a>Home</a></li>
               <li><a>About Us</a></li>
               <li><a>Shop</a></li>
               <li><a>All Fruits</a></li>
+              <div class="relative lg:hidden py-4">
+                <input
+                  type="text"
+                  placeholder="Search here"
+                  class="input input-bordered rounded-full w-80 border-none outline-none bg-gray-100 border-gray-300 placeholder-gray-400"
+                />
+                <span class="absolute right-0 inset-y-0 flex items-center pr-3">
+                  <a href=""><i class="fa fa-search text-gray-400"></i></a>
+                </span>
+              </div>
             </ul>
           </div>
         </div>
@@ -174,7 +183,7 @@
 
       <!-- start banner section  -->
 
-      <div class="carousel w-full mt-12">
+      <div class="carousel w-full mt-6 md:mt-12">
         <!-- slider One  -->
 
         <div id="slide1" class="carousel-item relative w-full">
@@ -306,7 +315,7 @@
     <main>
       <!-- start Deal of the day Section  -->
 
-      <section class="container mx-auto px-2 my-20 md:mt-56">
+      <section class="container mx-auto px-2 my-20 lg:mt-56">
         <div
           class="flex flex-col justify-center text-center gap-6 lg:flex-row lg:justify-between lg:text-left"
         >
@@ -386,15 +395,17 @@
                 <dialog id="my_modal_1" class="modal">
                   <form method="dialog" class="modal-box">
                     <img
-                      class="mx-auto w-72"
+                      class="mx-auto w-32 lg:w-72"
                       src="./images/fruit6.png"
                       alt=""
                     />
-                    <h3 class="text-3xl font-extrabold text-titleColor py-4">
+                    <h3
+                      class="text-2xl lg:text-3xl font-bold lg:font-extrabold text-titleColor py-4"
+                    >
                       Apples
                     </h3>
                     <p
-                      class="text-base font-normal text-textColor pb-4 w-96 mx-auto"
+                      class="text-base font-normal text-textColor pb-3 md:pb-4 md:w-96 mx-auto"
                     >
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -449,15 +460,17 @@
                 <dialog id="my_modal_2" class="modal">
                   <form method="dialog" class="modal-box">
                     <img
-                      class="mx-auto w-80"
+                      class="mx-auto w-32 lg:w-72"
                       src="./images/fruit7.png"
                       alt=""
                     />
-                    <h3 class="text-3xl font-extrabold text-titleColor py-4">
+                    <h3
+                      class="text-2xl lg:text-3xl font-bold lg:font-extrabold text-titleColor py-4"
+                    >
                       Orange
                     </h3>
                     <p
-                      class="text-base font-normal text-textColor pb-4 w-96 mx-auto"
+                      class="text-base font-normal text-textColor pb-3 md:pb-4 md:w-96 mx-auto"
                     >
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -514,15 +527,17 @@
                 <dialog id="my_modal_3" class="modal">
                   <form method="dialog" class="modal-box">
                     <img
-                      class="mx-auto w-80"
+                      class="mx-auto w-32 lg:w-72"
                       src="./images/fruit8.png"
                       alt=""
                     />
-                    <h3 class="text-3xl font-extrabold text-titleColor py-4">
+                    <h3
+                      class="text-2xl lg:text-3xl font-bold lg:font-extrabold text-titleColor py-4"
+                    >
                       Red Dragon
                     </h3>
                     <p
-                      class="text-base font-normal text-textColor pb-4 w-96 mx-auto"
+                      class="text-base font-normal text-textColor pb-3 md:pb-4 md:w-96 mx-auto"
                     >
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -577,15 +592,17 @@
                 <dialog id="my_modal_4" class="modal">
                   <form method="dialog" class="modal-box">
                     <img
-                      class="mx-auto w-80"
+                      class="mx-auto w-32 lg:w-72"
                       src="./images/fruit9.png"
                       alt=""
                     />
-                    <h3 class="text-3xl font-extrabold text-titleColor py-4">
+                    <h3
+                      class="text-2xl lg:text-3xl font-bold lg:font-extrabold text-titleColor py-4"
+                    >
                       Banana
                     </h3>
                     <p
-                      class="text-base font-normal text-textColor pb-4 w-96 mx-auto"
+                      class="text-base font-normal text-textColor pb-3 md:pb-4 md:w-96 mx-auto"
                     >
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -610,11 +627,18 @@
             </div>
           </div>
         </div>
+        <div class="text-center mt-12">
+          <button
+            class="btn bg-primaryColor outline-none border-none text-white text-base font-bold capitalize hover:bg-gray-700"
+          >
+            Shop All
+          </button>
+        </div>
       </section>
 
       <!-- start ourTeam Section  -->
 
-      <section class="container mx-auto px-2 my-20">
+      <section class="container mx-auto px-2 mt-28 my-20">
         <div class="w-full bannerOne rounded-md">
           <div class="text-white text-center">
             <div class="max-w-xl mx-auto pt-24 px-10">
@@ -922,5 +946,52 @@
         </div>
       </section>
     </main>
+    <!-- start footer  -->
+
+    <footer
+      class="footer footer-center p-10 bg-titleColor text-base-content pt-28"
+    >
+      <div>
+        <a class="flex items-center justify-center gap-4" href="#">
+          <img src="./images/logo.png" alt="logo" class="w-10" />
+          <h3 class="text-2xl font-bold md:text-3xl text-white">Fruit Burst</h3>
+        </a>
+      </div>
+
+      <div
+        class="flex flex-wrap justify-center gap-4 text-white text-lg font-medium"
+      >
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Shop</a>
+        <a class="link link-hover">All Fruits</a>
+        <a class="link link-hover">Support</a>
+        <a class="link link-hover">Account</a>
+      </div>
+      <div>
+        <div
+          class="grid grid-flow-col gap-4 text-2xl md:gap-8 text-white md:text-3xl"
+        >
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://youtube.com" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.apple.com" target="_blank"
+            ><i class="fab fa-apple"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
